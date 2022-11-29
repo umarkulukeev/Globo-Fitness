@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens/intro_screen.dart';
+
 void main() {
   runApp(GlobeApp());
 }
@@ -10,22 +12,8 @@ class GlobeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Globo Fitness')),
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/bmw.jpg'),
-              fit: BoxFit.cover,
-            )
-          ),
-          child: Center(
-            child: Text(
-                'Commit the great all')
-          ),
-        ),
-      ),
-    );
+        theme: ThemeData(primarySwatch: Colors.blueGrey),
+        home: IntroScreen());
   }
 }
 
